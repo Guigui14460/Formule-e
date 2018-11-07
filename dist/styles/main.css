@@ -1,0 +1,241 @@
+/*Organisation du fichier CSS :
+	- définition des polices, remise à zéros de valeurs et création de varibles
+	- corps du texte
+		+ header
+		+ body
+		+ footer
+
+*/
+
+/*POLICES*/
+@font-face {
+	font-family: K2D;
+	src: url(polices/K2D-Regular.ttf);}
+
+@font-face {
+	font-family: Roboto;
+	src: url(polices/Roboto-Regular.ttf);}
+
+/*On remet les valeurs à 0 pour éviter les mauvais placements*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*VARIABLES*/
+:root {
+  --main-text-color: #212529;
+  --main-bg-color: #ddd;
+  --navbar-height: 60px;
+  /*--navbar-bg-color: #3dd;*/
+  --navbar-active-hover-bg-color: rgba(0, 153, 153, .5);
+}
+
+
+/*CORPS DU SITE*/
+body {
+	color: var(--main-text-color);
+	background-color: var(--main-bg-color);
+	text-align: justify;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	background-color: var(--main-bg-color);
+	width: 76%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 30px 20px 30px;
+}
+
+h1, h2 {font-family: 'K2D', sans-serif;}
+h1, figcaption {
+	text-align: center;
+}
+h1, nav ul li {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+/*HEADER*/
+h1 {
+	text-shadow: 1px 1px #262626;
+	font-size: 300%;
+	margin: 20px 0 10px 0;
+}
+
+h2 {
+	margin-left: 20px;
+}
+
+p {
+	padding: 5px 0;
+}
+
+p:first-letter {
+	padding-left: 45px;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+header {
+	height: 100vh;
+	background-image: url(../images/formule_e_motorsport.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+nav {
+	width: 90%;
+	margin: auto;
+	background-color: transparent;
+	line-height: var(--navbar-height)
+}
+
+nav img {
+	margin-left: 20px;
+	height: var(--navbar-height);
+	width: auto;
+}
+
+nav ul {
+	list-style-type: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+	transition: 0.7s ease-in-out;
+}
+
+.active,
+nav ul li:hover,
+nav ul li:active {
+	background-color: var(--navbar-active-hover-bg-color);
+	border-radius: 8px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #000;
+	padding: 10px;
+}
+
+/*Source https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow*/
+.circle {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #000;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 110px;
+	font-size: 80px;
+	overflow: hidden;
+}
+
+.circle .fa {
+	color: #000;
+	margin: 0;
+	padding: 0;
+	animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(-50px);
+	}
+	20% {
+		transform: translateY(0px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+	60% {
+		transform: translateY(0px);
+	}
+	80% {
+		transform: translateY(-50px);
+	}
+	100% {
+		transform: translateY(100px);
+	}
+}
+
+/*MAIN*/
+small {
+	font-style: italic;
+}
+
+main a:hover,
+main a:active {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+figure {
+	width: 75%;
+  box-sizing: content-box;
+  border: 1px solid #000;
+  padding: 10px 4px 4px 4px;
+  margin: 10px auto 30px auto;
+}
+
+figure img {
+	box-sizing: content-box;
+	width: 75%;
+	height: auto;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale(0%);
+  transition: 0.4s ease-in;
+}
+
+/*figure img:hover {
+	filter: grayscale(100%);
+	width: 100%;
+}*/
+
+/*Source : https://www.youtube.com/watch?v=gM3IGPFwwvA*/
+/*main a[type="button"] {
+	text-decoration: none;
+	width: auto;
+	padding: 10px 20px;
+	background: none;
+	color: #000;
+	border: 1px solid #000;
+	font-size: 150%;
+	border-radius: 6px;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+main a[type="button"]:hover {
+	color: #000;
+	border: 2px solid #000;
+	font-weight: bold;
+	background: linear-gradient(0.25turn, #4d79ff, #4dffa6, #d2ff4d, #f33);
+}*/
+
+
+/*FOOTER*/
+footer {
+	font-size: 85%;
+	border-top: 2px solid #429DF5;
+	padding: 10px;
+}
+
+footer ul {
+	list-style: none;
+	margin: 5px 0 0 20px;
+}
+
+footer ul li {
+	margin-top: 2px;
+}
