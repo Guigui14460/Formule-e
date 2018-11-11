@@ -16,69 +16,39 @@
 	font-family: Roboto;
 	src: url(polices/Roboto-Regular.ttf);}
 
-/*On remet les valeurs à 0 pour éviter les mauvais placements*/
-* {
-	margin: 0;
-	padding: 0;
-}
 
 /*VARIABLES*/
 :root {
   --main-text-color: #212529;
   --main-bg-color: #ddd;
   --navbar-height: 60px;
-  /*--navbar-bg-color: #3dd;*/
+  --navbar-bg-color: #3dd;
   --navbar-active-hover-bg-color: rgba(0, 153, 153, .5);
 }
 
 
 /*CORPS DU SITE*/
 body {
+	margin: 0;
+	padding: 0;
 	color: var(--main-text-color);
 	background-color: var(--main-bg-color);
 	text-align: justify;
 	font-family: 'Roboto', sans-serif;
 }
 
-.container {
-	background-color: var(--main-bg-color);
-	width: 76%;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 20px 30px 20px 30px;
-}
-
-h1, h2 {font-family: 'K2D', sans-serif;}
-h1, figcaption {
-	text-align: center;
+h1, nav ul li,
+main a:hover,
+main a:active,
+p:first-letter {
+	/* text-transform: uppercase; */
+	font-weight: bold;
 }
 h1, nav ul li {
 	text-transform: uppercase;
-	letter-spacing: 2px;
 }
-
 
 /*HEADER*/
-h1 {
-	text-shadow: 1px 1px #262626;
-	font-size: 300%;
-	margin: 20px 0 10px 0;
-}
-
-h2 {
-	margin-left: 20px;
-}
-
-p {
-	padding: 5px 0;
-}
-
-p:first-letter {
-	padding-left: 45px;
-	font-size: 120%;
-	font-weight: bold;
-}
-
 header {
 	height: 100vh;
 	background-image: url(../images/formule_e_motorsport.jpg);
@@ -88,16 +58,17 @@ header {
 }
 
 nav {
-	width: 90%;
+	width:80%;
 	margin: auto;
 	background-color: transparent;
 	line-height: var(--navbar-height)
 }
 
 nav img {
-	margin-left: 20px;
-	height: var(--navbar-height);
+	/* height: var(--navbar-height); */
 	width: auto;
+	margin: auto;
+	margin-left: 20px;
 }
 
 nav ul {
@@ -129,7 +100,7 @@ nav ul li a {
 	top: 85%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 2px solid #000;
+	border: 2px solid red;
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
@@ -140,7 +111,7 @@ nav ul li a {
 }
 
 .circle .fa {
-	color: #000;
+	color: red;
 	margin: 0;
 	padding: 0;
 	animation: animate 1s linear infinite;
@@ -168,22 +139,100 @@ nav ul li a {
 }
 
 /*MAIN*/
+main {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	
+}
+
+aside {
+	margin-top: 30px;
+	width: calc(auto - 10%);
+	margin-left: 10%;
+}
+
+aside ul {
+	margin: 0;
+	padding: 0;
+	padding: 3px;
+	list-style-type: none;
+	background-color: #ccff66;
+}
+
+aside ul li {
+	background-color: #b3ff1a;
+	padding: 5px;
+	margin: 7px;
+	border-left: 2px solid #006600;
+}
+
+aside ul ul li {
+	border-left: 2px solid #1aff1a;
+}
+aside ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+h1 {
+	text-shadow: 1px 1px #262626;
+	font-size: 300%;
+	margin: 20px 0 10px 0;
+}
+
+h2 {
+	margin-left: 20px;
+}
+
+h1, h2 {
+	font-family: 'K2D', sans-serif;
+}
+h1, figcaption {
+	text-align: center;
+}
+
+p {
+	padding: 5px 0;
+}
+
+p:first-letter {
+	padding-left: 45px;
+	font-size: 120%;
+}
+
+.container {
+	background-color: var(--main-bg-color);
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 30px 20px 30px;
+}
+
+.container a, .container a:visited {
+	text-decoration: none;
+	color: #0099cc;
+	transition: 0.55s ease;
+}
+
+.container a:hover {
+	color: #000066;
+}
+
 small {
 	font-style: italic;
 }
 
 main a:hover,
 main a:active {
-	font-weight: bold;
 	cursor: pointer;
 }
 
 figure {
 	width: 75%;
-  box-sizing: content-box;
-  border: 1px solid #000;
-  padding: 10px 4px 4px 4px;
-  margin: 10px auto 30px auto;
+	box-sizing: content-box;
+	border: 1px solid #000;
+	padding: 10px 4px 4px 4px;
+	margin: 10px auto 30px auto;
 }
 
 figure img {
@@ -191,10 +240,10 @@ figure img {
 	width: 75%;
 	height: auto;
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  filter: grayscale(0%);
-  transition: 0.4s ease-in;
+	margin-left: auto;
+	margin-right: auto;
+	filter: grayscale(0%);
+	transition: 0.4s ease-in;
 }
 
 /*figure img:hover {
