@@ -7,51 +7,90 @@
 	<meta name="author" content="21804030" />
 	<title>Records de la Formule E</title>
 	<link rel="icon" href="../images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="../styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../styles/records.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print">
 </head>
 <body>
-	<header id="top">
-		<nav>
-			<a href="../index.html"><img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil"></a>
+		<header id="top">
+			<nav>
+				<a href="../index.html" class="logo"><img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil"></a>
+				<label for="show-menu" class="show-menu">
+					<svg>
+						<image xlink:href="../images/bars-solid.svg" x="0" y="0" width="65px" height="65px" />
+					</svg>
+				</label>
+				<input type="checkbox" id="show-menu" role="button">
+				<ul id="menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="histoire.html">Histoire</a></li>
+					<li class="active"><a href="records.html">Records</a></li>
+					<li><a href="competition.html">Compétitions</a></li>
+					<li><a href="fiche_technique.html">Fiche technique</a></li>
+				</ul>
+			</nav>
+			<a href="#content" class="circle">
+				<svg>
+					<image xlink:href="../images/angle-down-solid.svg" x="0" y="0" width="65px" height="65px" />
+				</svg>
+			</a>
+		</header>
+	<main id="content">
+		<aside>
 			<ul>
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="histoire.html">Histoire</a></li> <!-- Histoire, inventeur -->
-				<li class="active"><a href="records.html">Records</a></li> <!-- Record -->
-				<li><a href="competition.html">Compétitions</a></li> <!-- Compétition, championnats -->
-				<li><a href="fiche_technique.html">Fiche technique</a></li> <!-- Fiche technique -->
-			</ul>
-		</nav>
-	</header>
-	<main role="main" id="content">
-		<section>
-			<h1>Records</h1>
-			<aside>
-				<ul>
 				<li><a href="#def">Qu'est-ce qu'une Formule E ?</a></li>
 				<li><a href="#ecurie">Les écuries en FE</a></li>
-				<ul>
-					<li><a href="#feVSf1">Comparaison des écuries FE et F1</a></li>
-				</ul>
-				</ul>
-			</aside>
-		</section>
+				<li class="sub-section"><a href="#feVSf1">Comparaison des écuries FE et F1</a></li>
+			</ul>
+		</aside>
 		<div class="container">
+			<h1>Records</h1>
 			<section>
-				
+				<h2>Vitesse</h2>
 			</section>
-			<figure>
-				<img src="" alt="">
-				<figcaption>????</figcaption>
-			</figure>
-			<div id="scrollUp">
-				<a href="#top"><img src="../images/arrow_top.png"/></a>
+			<div class="scrollUp">
+				<a href="#top"><img src="../images/arrow_top.png" alt="Flèche pour remonter en haut" title="Cliquer pour remonter"/></a>
 			</div>
 		</div>
 	</main>
 	<footer>
-		<div class="container">
-			Copyright &copy;  + sources images ...
-		</div>
+		<section>
+			<h2>Copyright &copy;</h2>
+			<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
+			<div class="container">
+				<ul class="sources">
+					<li><h3>Sources documentaires :</h3>
+						<ul>
+							<li>Eurosport</li>
+							<li>Futura-Sciences</li>
+							<li>Auto-Moto</li>
+							<li>Ouest-France</li>
+							<li>AutoNews</li>
+							<li>FIA Formule E</li>
+							<li>FIA</li>
+							<li>Mediasportif</li>
+							<li>Wikiwand (wikipédia)</li>
+						</ul>
+					</li>
+					<li><h3>Images :</h3>
+						<ul>
+							<li>Créé par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
+							<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
+							<li>Logo de Formule E : <a href="http://www.fiaformulae.com/fr">FIA Formule E</a></li>
+							<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
+						</ul>
+					</li>
+					<li><h3>Sources code :</h3>
+						<ul>
+							<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
+							<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>
+							<li>SVG de la flèche utilisée : <a href="https://fontawesome.com/icons/angle-down?style=solid">Font Awesome</a></li>
+							<li>La barre de navigation responsive : <a href="https://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">Medialoot</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
 	</footer>
 </body>
 </html>
