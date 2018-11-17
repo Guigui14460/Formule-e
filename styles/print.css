@@ -1,0 +1,65 @@
+@font-face {
+	font-family: K2D;
+	src: url(polices/K2D-Regular.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(polices/Roboto-Regular.ttf);
+}
+
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+header, aside, .center-iframe, .scrollUp, footer {
+    display: none;
+}
+
+h1, h2, h3 {
+    font-family: 'K2D', 'sans-serif';
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    font-size: 200%;
+    margin-left: 50px;
+}
+
+figure {
+    width: 250px;
+	height: auto;
+	float: right;
+	margin: 0 0 0 20px;
+	box-sizing: content-box;
+}
+figure img {
+    box-sizing: content-box;
+    width: 100%;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	filter: grayscale(0%);
+	transition: 0.4s ease-in;
+}
+figcaption {
+    font-style: italic;
+    font-size: 85%;
+    padding: 3px 0 0 0;
+}
+
+a, a:visited, a:active {
+    color: #000066;
+}
+
+p:first-letter {
+	padding-left: 35px;
+	font-size: 120%;
+}

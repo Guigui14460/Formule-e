@@ -193,11 +193,9 @@ aside ul li {
 	margin: 7px;
 	border-left: 2px solid #ff6600;
 }
-aside ul ul li {
+aside ul .sub-section {
+	margin-left: 20px;
 	border-left: 2px solid #ffd11a;
-}
-aside ul ul {
-	padding-left: 10px;
 }
 aside ul li a {
 	text-decoration: none;
@@ -238,7 +236,7 @@ footer a, footer a:visited {
 	color: #0099cc;
 	transition: 0.55s ease;
 }
-main a:hover {
+.container a:hover {
 	color: #000066;
 }
 main ul {
@@ -308,7 +306,7 @@ footer {
 	background-color: #25282d;
 	color: #eee;
 }
-footer a:hover {
+footer .container a:hover {
 	color: #39598e;
 }
 footer ul {
