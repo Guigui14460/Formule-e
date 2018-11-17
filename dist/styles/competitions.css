@@ -1,0 +1,20 @@
+#feVSf1 {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	grid-gap: 15px;
+}
+#feVSf1, #feVSf1 ol,
+#feVSf1 li {
+	text-align: start;
+}
+#feVSf1, #feVSf1 li {
+	margin: 0;
+	padding: 0;
+}
+#feVSf1 {
+	list-style-type: none;
+}
+
+#feVSf1 h4 {
+	text-align: center;
+}
