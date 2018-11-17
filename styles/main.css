@@ -1,6 +1,6 @@
-/*Organisation du fichier CSS :
-	- définition des polices, remise à zéros de valeurs et création de varibles
-	- corps du texte
+﻿/*Organisation du fichier CSS :
+	- définition des polices, remise à zéros de valeurs
+	- corps du site
 		+ header
 		+ body
 		+ footer
@@ -10,42 +10,44 @@
 /*POLICES*/
 @font-face {
 	font-family: K2D;
-	src: url(polices/K2D-Regular.ttf);}
+	src: url(polices/K2D-Regular.ttf);
+}
 
 @font-face {
 	font-family: Roboto;
-	src: url(polices/Roboto-Regular.ttf);}
-
-
-/*VARIABLES*/
-:root {
-  --main-text-color: #212529;
-  --main-bg-color: #ddd;
-  --navbar-height: 60px;
-  --navbar-bg-color: #3dd;
-  --navbar-active-hover-bg-color: rgba(0, 153, 153, .5);
+	src: url(polices/Roboto-Regular.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /*CORPS DU SITE*/
 body {
 	margin: 0;
-	padding: 0;
-	color: var(--main-text-color);
-	background-color: var(--main-bg-color);
+    padding: 0;
+	color: #212529;
+	background-color: #eee;
 	text-align: justify;
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, nav ul li,
 main a:hover,
 main a:active,
-p:first-letter {
-	/* text-transform: uppercase; */
+footer a:hover,
+footer a:active,
+main p:first-letter {
 	font-weight: bold;
 }
 h1, nav ul li {
 	text-transform: uppercase;
+}
+a:hover,
+a:active,
+svg {
+	cursor: pointer;
 }
 
 /*HEADER*/
@@ -58,49 +60,79 @@ header {
 }
 
 nav {
-	width:80%;
+	width: 100%;
 	margin: auto;
 	background-color: transparent;
-	line-height: var(--navbar-height)
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+nav a {
+    margin-right: 30px;
 }
 
 nav img {
-	/* height: var(--navbar-height); */
-	width: auto;
-	margin: auto;
-	margin-left: 20px;
+    margin-left: 10px;
+    width: auto;
 }
 
 nav ul {
-	list-style-type: none;
-	float: right;
+    list-style-type: none;
+    margin: 0 10px 0 auto;
+    padding: 0;
 }
-
-nav ul li {
-	display: inline-block;
-	transition: 0.7s ease-in-out;
+nav li {
+    display: inline-block;
+    transition: 0.7s ease-in-out;
 }
-
 .active,
 nav ul li:hover,
 nav ul li:active {
-	background-color: var(--navbar-active-hover-bg-color);
+	background-color: rgba(0, 153, 153, .5);
 	border-radius: 8px;
 }
-
 nav ul li a {
 	text-decoration: none;
-	color: #000;
+    color: #000;
+    margin-right: 0;
 	padding: 10px;
 }
 
-/*Source https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow*/
+nav li a {
+    display: block;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    color: #000;
+    text-decoration: none;
+}
+.show-menu {
+    background: #138f64;
+    text-align: right;
+    height: 65px;
+    line-height: 65px;
+    padding: 10px 5px;
+    display: none;
+}
+.show-menu svg {
+    height: 65px;
+	width: 65px;
+	margin: 0;
+	padding: 0;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
 .circle {
 	position: absolute;
-	top: 85%;
+	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 2px solid red;
+	border: 2px solid black;
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
@@ -109,14 +141,13 @@ nav ul li a {
 	font-size: 80px;
 	overflow: hidden;
 }
-
-.circle .fa {
-	color: red;
+.circle svg {
+	height: 65px;
+	width: 65px;
 	margin: 0;
 	padding: 0;
 	animation: animate 1s linear infinite;
 }
-
 @keyframes animate {
 	0% {
 		transform: translateY(-50px);
@@ -141,112 +172,127 @@ nav ul li a {
 /*MAIN*/
 main {
 	display: grid;
-	grid-template-columns: 1fr 5fr;
-	
+	grid-template-columns: 200px 1fr;
+	background-color: #eee;
 }
 
 aside {
-	margin-top: 30px;
-	width: calc(auto - 10%);
-	margin-left: 10%;
+	width: 90%;
+	margin: 10px;
 }
-
 aside ul {
 	margin: 0;
 	padding: 0;
 	padding: 3px;
 	list-style-type: none;
-	background-color: #ccff66;
+	background-color: #24ad46;
 }
-
 aside ul li {
-	background-color: #b3ff1a;
+	background-color: #006600;
 	padding: 5px;
 	margin: 7px;
-	border-left: 2px solid #006600;
+	border-left: 2px solid #ff6600;
 }
-
 aside ul ul li {
-	border-left: 2px solid #1aff1a;
+	border-left: 2px solid #ffd11a;
 }
 aside ul ul {
 	padding-left: 10px;
 }
 aside ul li a {
 	text-decoration: none;
-	color: #000;
-}
-
-h1 {
-	text-shadow: 1px 1px #262626;
-	font-size: 300%;
-	margin: 20px 0 10px 0;
-}
-
-h2 {
-	margin-left: 20px;
+	color: #eee;
 }
 
 h1, h2 {
 	font-family: 'K2D', sans-serif;
 }
-h1, figcaption {
+h1 {
+	text-shadow: 1px 1px #1d1616;
+	font-size: 300%;
+	margin: 10px 0 10px 0;
 	text-align: center;
+}
+h2 {
+	margin-left: 20px;
 }
 
 p {
 	padding: 5px 0;
 }
 
-p:first-letter {
+main p:first-letter {
 	padding-left: 45px;
 	font-size: 120%;
 }
 
 .container {
-	background-color: var(--main-bg-color);
 	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 20px 30px 20px 30px;
 }
-
-.container a, .container a:visited {
+.container a, .container a:visited,
+footer a, footer a:visited {
 	text-decoration: none;
 	color: #0099cc;
 	transition: 0.55s ease;
 }
-
 .container a:hover {
 	color: #000066;
 }
-
-small {
-	font-style: italic;
+main ul {
+    margin-left: 12px;
 }
-
-main a:hover,
-main a:active {
-	cursor: pointer;
+main li {
+	margin: 0 0 0 5px;
+	padding: 0 0 0 10px;
 }
 
 figure {
-	width: 75%;
-	box-sizing: content-box;
-	border: 1px solid #000;
-	padding: 10px 4px 4px 4px;
-	margin: 10px auto 30px auto;
-}
-
-figure img {
-	box-sizing: content-box;
-	width: 75%;
+    width: 250px;
 	height: auto;
+	float: right;
+	margin: 0 0 0 20px;
+	box-sizing: content-box;
+}
+figure img {
+    box-sizing: content-box;
+    width: 100%;
+    height: auto;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	filter: grayscale(0%);
 	transition: 0.4s ease-in;
+}
+figcaption {
+    font-style: italic;
+    font-size: 70%;
+    padding: 3px 0 0 0;
+}
+
+.center-iframe {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0 auto 25px auto;
+}
+iframe {
+	width: 100%;
+	height: 60vh;
+}
+
+.scrollUp {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	opacity: 0.5;
+}
+.scrollUp img {
+	width: 60px;
+	height: 60px;
 }
 
 /*figure img:hover {
@@ -254,54 +300,114 @@ figure img {
 	width: 100%;
 }*/
 
-/*Source : https://www.youtube.com/watch?v=gM3IGPFwwvA*/
-/*main a[type="button"] {
-	text-decoration: none;
-	width: auto;
-	padding: 10px 20px;
-	background: none;
-	color: #000;
-	border: 1px solid #000;
-	font-size: 150%;
-	border-radius: 6px;
-	transition: 0.5s;
-	overflow: hidden;
-}
-
-main a[type="button"]:hover {
-	color: #000;
-	border: 2px solid #000;
-	font-weight: bold;
-	background: linear-gradient(0.25turn, #4d79ff, #4dffa6, #d2ff4d, #f33);
-}*/
-
 
 /*FOOTER*/
 footer {
 	font-size: 85%;
-	border-top: 2px solid #429DF5;
 	padding: 10px;
+	background-color: #25282d;
+	color: #eee;
 }
-
+footer a:hover {
+	color: #39598e;
+}
 footer ul {
 	list-style: none;
-	margin: 5px 0 0 20px;
+	margin: 0;
+	padding: 0;
 }
-
 footer ul li {
 	margin-top: 2px;
 }
+footer p {
+	margin: 0 0 0 20px;
+}
+.sources {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+.sources h3 {
+	text-align: center;
+}
+.sources ul li {
+	margin-left: 30px;
+	list-style-type: square;
+	text-indent: 5%; 
+}
 
-@media(max-width:800px){
-	main {
+
+
+@media (max-width : 890px){
+    .logo {
+        background-color: #000;
+    }
+    nav ul {
+        position: relative;
+        display: none;
+        margin-right: 0;
+        background-color: #3dd;
+    }
+    nav li {
+        margin-bottom: 1px;
+    }
+    nav ul li, a {
+        width: 100%;
+        text-align: center;
+    }
+    nav li a {
+        height: 50px;
+        line-height: 50px;
+    }
+    .show-menu {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 700px){
+    main {
 		display: initial;
 	}
-	
 	aside {
 		margin-top: 30px;
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+    }
+	header {
+        height: 50vh;
+        background-position-y: 0px;
 	}
+	.circle, .circle svg {
+		display: none;
+	}
+	.sources ul li {
+		text-indent:5px; 
+	}
+    .sources {
+        display: initial;
+    }
+    h2 {
+        text-align: center;
+    }
+    main p:first-letter {
+        padding-left: 20px;
+    }
+    .container {
+        padding: 20px 0 20px 0;
+    }
+    footer p {
+        margin: 0 0 0 0;
+    }
+}
 
+@media (max-width: 435px){
+    main figure {
+        margin: 0;
+        float: none;
+        width: 100%;
+        height: auto;
+    }
 }
