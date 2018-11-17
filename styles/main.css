@@ -238,7 +238,7 @@ footer a, footer a:visited {
 	color: #0099cc;
 	transition: 0.55s ease;
 }
-.container a:hover {
+main a:hover {
 	color: #000066;
 }
 main ul {
