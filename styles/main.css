@@ -224,19 +224,19 @@ main p:first-letter {
 	font-size: 120%;
 }
 
-.container {
+article {
 	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 20px 30px 20px 30px;
 }
-.container a, .container a:visited,
+article a, article a:visited,
 footer a, footer a:visited {
 	text-decoration: none;
 	color: #0099cc;
 	transition: 0.55s ease;
 }
-.container a:hover {
+article a:hover {
 	color: #000066;
 }
 main ul {
@@ -255,14 +255,9 @@ figure {
 	box-sizing: content-box;
 }
 figure img {
-    box-sizing: content-box;
     width: 100%;
     height: auto;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	filter: grayscale(0%);
-	transition: 0.4s ease-in;
 }
 figcaption {
     font-style: italic;
@@ -293,11 +288,6 @@ iframe {
 	height: 60px;
 }
 
-/*figure img:hover {
-	filter: grayscale(100%);
-	width: 100%;
-}*/
-
 
 /*FOOTER*/
 footer {
@@ -306,7 +296,7 @@ footer {
 	background-color: #25282d;
 	color: #eee;
 }
-footer .container a:hover {
+footer article a:hover {
 	color: #39598e;
 }
 footer ul {
@@ -324,6 +314,7 @@ footer p {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
+	color: rgb(156, 143, 143);
 }
 .sources h3 {
 	text-align: center;
@@ -338,7 +329,7 @@ footer p {
 
 @media (max-width : 890px){
     .logo {
-        background-color: #000;
+        background-color: #3dd;
     }
     nav ul {
         position: relative;
@@ -351,7 +342,7 @@ footer p {
     }
     nav ul li, a {
         width: 100%;
-        text-align: center;
+		text-align: center;
     }
     nav li a {
         height: 50px;
@@ -359,7 +350,10 @@ footer p {
     }
     .show-menu {
         display: block;
-    }
+	}
+	.scrollUp {
+		display: none;
+	}
 }
 
 
@@ -393,12 +387,15 @@ footer p {
     main p:first-letter {
         padding-left: 20px;
     }
-    .container {
+    article {
         padding: 20px 0 20px 0;
     }
     footer p {
         margin: 0 0 0 0;
-    }
+	}
+	footer h3 {
+		margin: 15px 0 0 0;
+	}
 }
 
 @media (max-width: 435px){
