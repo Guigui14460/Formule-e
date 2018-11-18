@@ -1,3 +1,11 @@
+/*Organisation du fichier CSS :
+    - importation des polices (ligne 8)
+    - corps de la page imprimable (ligne 19)
+        + désactivation des éléments ne contenant aucun contenu (ligne 24)
+*/
+
+
+/* IMPORT DES POLICES */
 @font-face {
 	font-family: K2D;
 	src: url(polices/K2D-Regular.ttf);
@@ -8,11 +16,12 @@
 	src: url(polices/Roboto-Regular.ttf);
 }
 
-
+/* CORPS DE LA PAGE IMPRIMABLE */
 body {
     font-family: 'Roboto', 'sans-serif';
 }
 
+/* On désactive pour ne laisser que le contenu */
 header, aside, .center-iframe, .scrollUp, footer {
     display: none;
 }
@@ -32,22 +41,19 @@ h2 {
     margin-left: 50px;
 }
 
+/* On place les éléments figure à droite avec une taille de 250 pixels entouré par le texte */
 figure {
     width: 250px;
-	height: auto;
+	height: auto; /* Prendra la taille de l'image pour ne pas la découper ou laisser des marges internes */
 	float: right;
 	margin: 0 0 0 20px;
 	box-sizing: content-box;
 }
+/* L'image prend toute la place disponible en fonction de sa taille */
 figure img {
-    box-sizing: content-box;
     width: 100%;
     height: auto;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	filter: grayscale(0%);
-	transition: 0.4s ease-in;
 }
 figcaption {
     font-style: italic;
@@ -55,11 +61,17 @@ figcaption {
     padding: 3px 0 0 0;
 }
 
+/* Coloration des liens qu'ils soient visité, cliqué ou non */
 a, a:visited, a:active {
     color: #000066;
 }
 
+/* Décalage de la première lettre de chaque paragraphe (faire un alinéa et une petite lettrine) */
 p:first-letter {
 	padding-left: 35px;
 	font-size: 120%;
+}
+
+p {
+    text-align: justify;
 }

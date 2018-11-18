@@ -7,15 +7,21 @@
 	<meta name="author" content="21804030" />
 	<title>Fiche technique des Formules E</title>
 	<link rel="icon" href="../images/favicon.ico">
+    <!-- 2 liens CSS pour le site quand il est affiché à l'écran -->
 	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="../styles/fiche_technique.css" media="screen">
+    <!-- 1 lien CSS pour le site lors de l'aperçu avant impression -->
 	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print">
 </head>
 <body>
 	<header id="top">
 		<nav>
-			<a href="../index.html" class="logo"><img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil"></a>
+			<a href="../index.html" class="logo">
+				<img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil">
+			</a>
+            <!-- Bouton qui va faire apparaître/disparaître le menu lors d'un rétrécissement de la taille du navigateur -->
 			<label for="show-menu" class="show-menu">
+				<!-- Balise SVG pour permettre l'affichage de l'image (format : .svg) -->
 				<svg>
 					<image xlink:href="../images/bars-solid.svg" x="0" y="0" width="65px" height="65px" />
 				</svg>
@@ -29,6 +35,7 @@
 				<li class="active"><a href="fiche_technique.html">Fiche technique</a></li>
 			</ul>
 		</nav>
+        <!-- Création d'une flèche descendante animée -->
 		<a href="#content" class="circle">
 			<svg>
 				<image xlink:href="../images/angle-down-solid.svg" x="0" y="0" width="65px" height="65px" />
@@ -36,6 +43,7 @@
 		</a>
 	</header>
 	<main id="content">
+		<!-- Menu secondaire interne à la page -->
 		<aside>
 			<ul>
 				<li><a href="#def">Qu'est-ce qu'une Formule E ?</a></li>
@@ -48,7 +56,10 @@
 			<section>
 				<h2>Moteur</h2>
 			</section>
-			<a href="#top" class="scrollUp"><img src="../images/arrow_top.png" alt="Flèche pour remonter en haut" title="Cliquer pour remonter"/></a>
+            <!-- Flèche pour remonter aux header (barre de navigation principalement) -->
+			<a href="#top" class="scrollUp">
+				<img src="../images/arrow_top.png" alt="Flèche pour remonter en haut" title="Cliquer pour remonter"/>
+			</a>
 		</article>
 	</main>
 	<footer>
@@ -57,7 +68,8 @@
 			<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
 			<article>
 				<ul class="sources">
-					<li><h3>Sources documentaires :</h3>
+					<li>
+						<h3>Sources documentaires :</h3>
 						<ul>
 							<li>Eurosport</li>
 							<li>Futura-Sciences</li>
@@ -70,7 +82,8 @@
 							<li>Wikiwand (wikipédia)</li>
 						</ul>
 					</li>
-					<li><h3>Images :</h3>
+					<li>
+						<h3>Images :</h3>
 						<ul>
 							<li>Créé par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
 							<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
@@ -78,7 +91,8 @@
 							<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
 						</ul>
 					</li>
-					<li><h3>Sources code :</h3>
+					<li>
+						<h3>Sources code :</h3>
 						<ul>
 							<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
 							<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>

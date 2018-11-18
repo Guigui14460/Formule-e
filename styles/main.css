@@ -1,13 +1,24 @@
 ﻿/*Organisation du fichier CSS :
-	- définition des polices, remise à zéros de valeurs
-	- corps du site
-		+ header
-		+ body
-		+ footer
-
+	- définition des polices, remise à zéros de valeurs (ligne 20)
+	- corps du site (ligne 38)
+		+ header (ligne 67)
+			* barre de navigation principale (ligne 76)
+			* flèche descendante animée (ligne 145)
+		+ main (ligne 191)
+			* menu secondaire, menu page (ligne 198)
+			* conteneur (ligne 246)
+			* contenu vidéo YouTube : mise en place de son adaptivité face aux tailles de navigateur (ligne 296)
+			* flèche pour remonter au header (ligne 311)
+		+ footer (ligne 325)
+			* disposition des sources (ligne 347)
+	- mise en place du responsive (@media) (ligne 364)
+		+ 890px (ligne 365)
+		+ 700px (ligne 414)
+		+ 435px (ligne 454)
 */
 
 /*POLICES*/
+/* Importations des polices */
 @font-face {
 	font-family: K2D;
 	src: url(polices/K2D-Regular.ttf);
@@ -18,6 +29,7 @@
 	src: url(polices/Roboto-Regular.ttf);
 }
 
+/* Remise à zéro des marges internes et externes de chaques éléments HTML */
 * {
     margin: 0;
     padding: 0;
@@ -41,9 +53,11 @@ footer a:active,
 main p:first-letter {
 	font-weight: bold;
 }
+/* On met en lettre capitale */
 h1, nav ul li {
 	text-transform: uppercase;
 }
+/* Changement de curseur */
 a:hover,
 a:active,
 svg {
@@ -52,38 +66,36 @@ svg {
 
 /*HEADER*/
 header {
-	height: 100vh;
+	height: 100vh; /* Prend toute la hauteur de la fenêtre */
 	background-image: url(../images/formule_e_motorsport.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover; /* Couvre tout la header */
 }
 
+/* BARRE DE NAVIGATION PRINCIPALE */
 nav {
 	width: 100%;
 	margin: auto;
 	background-color: transparent;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr; /* 1fr pour le logo et 5fr pour le ul (donc 1fr pour chaque li) */
 }
-
 nav a {
     margin-right: 30px;
 }
-
 nav img {
     margin-left: 10px;
     width: auto;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0 10px 0 auto;
     padding: 0;
 }
 nav li {
-    display: inline-block;
-    transition: 0.7s ease-in-out;
+    display: inline-block; /* Affichage en ligne des éléments */
+    transition: 0.4s ease-in-out; /* Effet de transition lors du survol des liens de la barre */
 }
 .active,
 nav ul li:hover,
@@ -97,72 +109,79 @@ nav ul li a {
     margin-right: 0;
 	padding: 10px;
 }
-
 nav li a {
-    display: block;
+    display: block; /* Permet de prendre tout l'espace inutile du li pour pouvoir faire de plus gros lien cliquable */
     height: 65px;
     text-align: center;
     line-height: 65px;
     color: #000;
     text-decoration: none;
 }
+/* "Menu déroulant" pour afficher le menu principal */
 .show-menu {
     background: #138f64;
     text-align: right;
     height: 65px;
-    line-height: 65px;
+    line-height: 65px; /* En mettant les mêmes valeurs aux propriété height et line-height, cela permet de centrer verticalement le texte */
     padding: 10px 5px;
     display: none;
 }
+/* Définition de taille pour l'image au format .svg */
 .show-menu svg {
     height: 65px;
 	width: 65px;
 	margin: 0;
 	padding: 0;
 }
+/* Désaffichage de la checkbox */
 input[type=checkbox] {
     display: none;
 }
+/* Si la checkbox est checkée, le menu apparaît */
 input[type=checkbox]:checked ~ #menu {
     display: block;
 }
 
+/* CRÉATION DE LA FLÈCHE DESCENDANTE ANIMÉE */
+/* Création du cercle */
 .circle {
-	position: absolute;
-	top: 90%;
+	position: absolute; /* Aboslute pour que le cercle ne se trouve que dans le header */
+	top: 90%; /* Placement du cercle */
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); /* Recentrage du cercle */
 	border: 2px solid black;
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	text-align: center;
 	line-height: 110px;
 	font-size: 80px;
-	overflow: hidden;
+	overflow: hidden; /* On cache l'animation (les éléments) qui dépasse du cercle */
 }
+/* On utilise une image au format .svg d'une flèche orientée vers le bas */
 .circle svg {
 	height: 65px;
 	width: 65px;
 	margin: 0;
 	padding: 0;
-	animation: animate 1s linear infinite;
+	animation: animate 1s linear infinite; /* Animation de la flèche */
 }
+/* Création de l'animation de la flèche */
 @keyframes animate {
 	0% {
-		transform: translateY(-50px);
+		transform: translateY(-100px);
 	}
 	20% {
-		transform: translateY(0px);
+		transform: translateY(-10px);
 	}
 	40% {
-		transform: translateY(0px);
+		transform: translateY(-10px);
 	}
 	60% {
-		transform: translateY(0px);
+		transform: translateY(-10px);
 	}
 	80% {
-		transform: translateY(-50px);
+		transform: translateY(-10px);
 	}
 	100% {
 		transform: translateY(100px);
@@ -171,11 +190,12 @@ input[type=checkbox]:checked ~ #menu {
 
 /*MAIN*/
 main {
-	display: grid;
-	grid-template-columns: 200px 1fr;
+	display: grid; /* On affiche une grille */
+	grid-template-columns: 200px 1fr; /* 200px = élément aside, 1fr = reste de la page pour élément article */
 	background-color: #eee;
 }
 
+/* MENU SECONDAIRE, MENU POUR PAGE */
 aside {
 	width: 90%;
 	margin: 10px;
@@ -193,6 +213,7 @@ aside ul li {
 	margin: 7px;
 	border-left: 2px solid #ff6600;
 }
+/* On met une marges à gauche pour les éléments li de class sub-section pour qu'ils soient affiché comme une sous-partie */
 aside ul .sub-section {
 	margin-left: 20px;
 	border-left: 2px solid #ffd11a;
@@ -202,6 +223,7 @@ aside ul li a {
 	color: #eee;
 }
 
+/* On change la police de tous les éléments h1 et h2 */
 h1, h2 {
 	font-family: 'K2D', sans-serif;
 }
@@ -218,14 +240,16 @@ h2 {
 p {
 	padding: 5px 0;
 }
-
+/* Décalage de la première lettre de chaque paragraphe situé dans l'élément main (faire un alinéa et une petite lettrine) */
 main p:first-letter {
 	padding-left: 45px;
 	font-size: 120%;
 }
 
+/* CRÉATION D'UN CONTENEUR POUR LE CONTENU DE LA PAGE */
+/* On réduit la largeur de 10% et on le centre */
 article {
-	width: 90%;
+	width: 90%; 
 	margin-right: auto;
 	margin-left: auto;
 	padding: 20px 30px 20px 30px;
@@ -234,11 +258,13 @@ article a, article a:visited,
 footer a, footer a:visited {
 	text-decoration: none;
 	color: #0099cc;
-	transition: 0.55s ease;
+	transition: 0.3s ease; /* Effet de transition au survol des liens */
 }
 article a:hover {
 	color: #000066;
 }
+
+/* On définit des marges plus appropriées au contenu de la page (car réinitialisé au début) */
 main ul {
     margin-left: 12px;
 }
@@ -247,13 +273,15 @@ main li {
 	padding: 0 0 0 10px;
 }
 
+/* On place les éléments figure à droite avec une taille de 250 pixels entouré par le texte */
 figure {
     width: 250px;
-	height: auto;
+	height: auto; /* Prendra la taille de l'image pour ne pas la découper ou laisser des marges internes */
 	float: right;
 	margin: 0 0 0 20px;
 	box-sizing: content-box;
 }
+/* On recentre l'image dans la figure et elle prend toute la place disponible en fonction de sa taille */
 figure img {
     width: 100%;
     height: auto;
@@ -265,6 +293,8 @@ figcaption {
     padding: 3px 0 0 0;
 }
 
+/* CONTENU VIDÉO YOUTUBE : MISE EN PLACE DE L'ADAPTIVITÉ FACE AUX TAILLES DE NAVIGATEUR */
+/* Placement de l'élément div contenant la vidéo */
 .center-iframe {
 	top: 0;
 	right: 0;
@@ -272,11 +302,14 @@ figcaption {
 	left: 0;
 	margin: 0 auto 25px auto;
 }
+/* Définition de la taille de la vidéo */
 iframe {
-	width: 100%;
-	height: 60vh;
+	width: 100%; /* Prend 100% de l'espace disponible en largeur du bloc */
+	height: 60vh; /* Prend 60% de la hauteur du navigateur */
 }
 
+/* FLÈCHE POUR REMONTER AU HEADER */
+/* On le fixe en bas à droite avec une opacité (petite transparence) */
 .scrollUp {
 	position: fixed;
 	bottom: 15px;
@@ -291,16 +324,16 @@ iframe {
 
 /*FOOTER*/
 footer {
-	font-size: 85%;
+	font-size: 85%; /* Réduction de la taille de toutes les polices contenues dans l'élément footer */
 	padding: 10px;
 	background-color: #25282d;
 	color: #eee;
 }
 footer article a:hover {
-	color: #39598e;
+	color: #39598e; /* Couleur différente au survol par rapport aux éléments a contenues dans le main */
 }
 footer ul {
-	list-style: none;
+	list-style: none; /* On enlève le style des listes du footer */
 	margin: 0;
 	padding: 0;
 }
@@ -310,9 +343,11 @@ footer ul li {
 footer p {
 	margin: 0 0 0 20px;
 }
+
+/* DISPOSITION DES SOURCES */
 .sources {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr; /* 1er : Sources documentaires, 2ème : Images, 3ème : Sources code (techniques) */
 	grid-gap: 20px;
 	color: rgb(156, 143, 143);
 }
@@ -321,19 +356,19 @@ footer p {
 }
 .sources ul li {
 	margin-left: 30px;
-	list-style-type: square;
-	text-indent: 5%; 
+	list-style-type: square; /* On remet un style de liste mais que pour les sous-listes */
+	text-indent: 5%; /* On fait une indentation du texte */
 }
 
 
-
+/* MISE EN PLACE POUR LE RESPONSIVE */
 @media (max-width : 890px){
     .logo {
         background-color: #3dd;
     }
     nav ul {
         position: relative;
-        display: none;
+        display: none; /* Désaffichage du menu (remplacer pour le système de checkbox et menu déroulant (ligne 120)) */
         margin-right: 0;
         background-color: #3dd;
     }
@@ -349,10 +384,10 @@ footer p {
         line-height: 50px;
     }
     .show-menu {
-        display: block;
+        display: block; /* Affichage du bouton pour dérouler le menu */
 	}
 	.scrollUp {
-		display: none;
+		display: none; /* Désaffichage de la flèche de remontée */
 	}
 
 	nav img {
@@ -361,6 +396,7 @@ footer p {
 		width: auto;
 	}
 
+	/* Redimentionnage du bouton et de l'image */
 	.show-menu {
 		height: 60px;
 		line-height: 60px;
@@ -377,26 +413,26 @@ footer p {
 
 @media (max-width: 700px){
     main {
-		display: initial;
+		display: initial; /* Suppression des grilles */
 	}
 	aside {
 		margin-top: 30px;
-		width: 90%;
+		width: 90%; /* Prend 90% de la largeur de son bloc */
 		margin-left: auto;
 		margin-right: auto;
     }
 	header {
-        height: 50vh;
-        background-position-y: 0px;
+        height: 50vh; /* Le header prend 50% de la hauteur du navigateur */
+        background-position-y: 0px; /* Positionnage à 0 en hauteur pour l'image d'arrière-plan */
 	}
 	.circle, .circle svg {
-		display: none;
+		display: none; /* Désaffichage de la flèche de descente animée */
 	}
 	.sources ul li {
 		text-indent:5px; 
 	}
     .sources {
-        display: initial;
+        display: initial; /* Suppression des grilles pour les sources */
     }
     h2 {
         text-align: center;
@@ -416,6 +452,7 @@ footer p {
 }
 
 @media (max-width: 435px){
+	/* L'élément figure prend désormais toute la taille du bloc dans lequel il se trouve */
     main figure {
         margin: 0;
         float: none;
