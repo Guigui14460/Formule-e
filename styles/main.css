@@ -354,6 +354,23 @@ footer p {
 	.scrollUp {
 		display: none;
 	}
+
+	nav img {
+		margin: 10px 0 10px 0;
+		height: 55px;
+		width: auto;
+	}
+
+	.show-menu {
+		height: 60px;
+		line-height: 60px;
+	}
+	.show-menu svg {
+		height: 40px;
+		width: 40px;
+		margin: 0;
+		padding: 0;
+	}
 }
 
 
