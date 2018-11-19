@@ -160,8 +160,8 @@ input[type=checkbox]:checked ~ #menu {
 }
 /* On utilise une image au format .svg d'une flèche orientée vers le bas */
 .circle svg {
-	height: 65px;
-	width: 65px;
+	height: 60px;
+	width: 55px;
 	margin: 0;
 	padding: 0;
 	animation: animate 1s linear infinite; /* Animation de la flèche */
