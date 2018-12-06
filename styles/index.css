@@ -1,4 +1,0 @@
-/* Désactivation du système de grille (pas de balise aside donc pas besoin de grille) */
-main {
-    display: initial;
-}
