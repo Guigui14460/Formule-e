@@ -8,10 +8,10 @@
 	<title>Fiche technique des Formules E</title>
 	<link rel="icon" href="../images/favicon.ico">
     <!-- 2 liens CSS pour le site quand il est affiché à l'écran -->
-	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="../styles/fiche_technique.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen"> <!-- Feuille commune à toutes les pages -->
+	<link rel="stylesheet" type="text/css" href="../styles/fiche_technique.css" media="screen"> <!-- Exclusive à cette page -->
     <!-- 1 lien CSS pour le site lors de l'aperçu avant impression -->
-	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print"> <!-- Feuille commune à toutes les pages -->
 </head>
 <body>
 	<header id="top">
@@ -46,63 +46,138 @@
 		<!-- Menu secondaire interne à la page -->
 		<aside>
 			<ul>
-				<li><a href="#def">Qu'est-ce qu'une Formule E ?</a></li>
-				<li><a href="#ecurie">Les écuries en FE</a></li>
-				<li class="sub-section"><a href="#feVSf1">Comparaison des écuries FE et F1</a></li>
+				<li><a href="#1ere_gen">1<sup>ère</sup> génération</a></li>
+				<li class="sub-section"><a href="#motorisation">Motorisation et transmission</a></li>
+				<li class="sub-section"><a href="#chassis">Châssis et carosserie</a></li>
+				<li class="sub-section"><a href="#roues">Roues</a></li>
+				<li class="sub-section"><a href="#dimensions">Dimensions et poids</a></li>
+				<li class="sub-section"><a href="#autre">Autres chiffres</a></li>
+				<li><a href="#2nde_gen">2<sup>nde</sup> génération</a></li>
 			</ul>
 		</aside>
-		<article>
+		<!-- Utilisation de l'élément div ayant la classe wrapper afin de diminuer la taille -->
+		<div class="wrapper">
 			<h1>Fiche technique</h1>
-			<section>
-				<h2>Moteur</h2>
+			<section id="1ere_gen">
+				<h2>1<sup>ère</sup> génération</h2>
+				<article id="motorisation">
+					<h3>Motorisation et transmission</h3>
+					<p>Le moteur est situé à l'arrière faisant en sorte que lors d'une collision avec un mur pris de plein fouet, la monoplace ne s'emflamme ou explose pas (surtout le cas en F1). Il a une puissance maximale de 200kW (270 cheavaux en qualifications et 241 chevaux en courses). Pour la saison 1, <a href="https://www.mclaren.com/group/">McLaren Electronic Technologies</a> a produit tous les moteurs, désormais, d'autres constructeurs sont impliqués comme Audi, Renault (Nissan pour la 5<sup>ème</sup> saison), etc.</p>
+					<figure class="main_image">
+						<img src="../images/formule-e-volant-300x214.jpg" alt="">
+						<figcaption>Voici le volant d'un pilote de Formule E</figcaption>
+					</figure>
+					<p>Les batteries sont des RESS (Rechargeable Energy Storage System) lithium-ion. Ils sont produits par Williams Advanced Engineering.</p>
+					<p>Pour la transmission, nous somme du type propulsion avec une boîte de vitesses à cinq rapports. Les commandes du véhicules sont des palettes intégrées au volant détachable de la monoplace.</p>
+				</article>
+				<article id="chassis">
+					<h3>Châssis (Spark SRT_01e) et carosserie</h3>
+					<figure class="main_image">
+						<img src="../images/chassis.jpg" alt="">
+						<figcaption>Voici le châssis d'une Formule E</figcaption>
+					</figure>
+					<p>Le châssis est une structure alvéolaire composé de fibre de carbone et d'aluminium. L'utilisation de ces matériaux sont principalement pour leurs résistances à la traction et à la compression, mais aussi pour leur flexibilité et leur faible densité ce qui réduit le poids de la monoplace afin d'aller plus vite plus rapidement.</p>
+					<p>La carosserie est composée aussi de fibre de carbone, mais elle est composée de kevlar qui offre une un peu moins bonne résistance que le fibre de carbone. Le kevlar est notamment utilisé pour les gilets pare-balles pour leur résistance, flexibilité et par rapport au poids de ce matériaux.</p>
+					<p>En composant la monoplace de tels matériaux qui sont résistants aux chocs pour amoindrir le contact avec un autre véhicule ou avec une paroi du circuit et la légèreté associé à ces matériaux permet à celles-ci d'être légères. Cela peut permettre aux monoplaces d'aller encore plus vite en étant tout aussi résistantes.</p>
+				</article>
+				<article id="roues">
+					<h3>Roues</h3>
+					<p>Les pneumatiques sont exclusivement livré par <a href="https://www.michelin.fr/">Michelin</a>. Ceux sont des 18" scultés pour différentes conditions de circuits (sec ou pluie pour une meilleure adhérance à la piste).</p>
+				</article>
+				<article id="dimensions">
+					<h3>Dimensions et poids</h3>
+					<ul>
+						<li>Longueur : 5 <abbr title="mètres">m</abbr></li>
+						<li>Largeur : 1,8 <abbr title="mètres">m</abbr></li>
+						<li>Hauteur : 1,25 <abbr title="mètres">m</abbr></li>
+						<li>Poids total de la monoplace avec le pilote et sans aucune goutte d'essence : 880 <abbr title="kilogrammes">kg</abbr></li>
+						<li>Poids des batteries : 320 <abbr title="kilogrammes">kg</abbr></li>
+					</ul>
+				</article>
+				<article id="autre">
+					<h3>Autres chiffres</h3>
+					<ul>
+						<li>Bruit : 80 <abbr title="décibel">dB</abbr> équivalent à une citadine passant à 110 <abbr title="kilomètres par heure">km/h</abbr></li>
+						<li>Autonomie : 50 km (1/2 course => changement de monoplace)</li>
+						<li>Accélération : 0-100 <abbr title="kilomètres par heure">km/h</abbr> en 3 secondes</li>
+						<li>Vitesse maximale : 225 <abbr title="kilomètres par heure">km/h</abbr></li>
+						<li>Coûts châssis + batterie : 350 000 euros</li>
+						<li>Prix total du véhicule : 480 000 euros (par monoplace). Pour une seule course, cela s'évèle à 960 000 euros (pour 2 monoplaces)</li>
+					</ul>
+				</article>
+			</section>
+			<section id="2nde_gen">
+				<h2>La seconde génération</h2>
+				<figure class="main_image">
+					<img src="../images/techeetah-saison-5-1024x576.jpg" alt="">
+					<figcaption>Voici la voiture seconde génération introduit par le constructeur DS Automobile pour la saison 5</figcaption>
+				</figure>
+				<p>Tout d'abord, elle sera utilisée pour la première fois dans la nouvelle saison (5<sup>ème</sup>). Elle permet d'améliorer la sécurité du pilote avec le halo. Mais ce n'est pas la seule innovation car en effet, une très grande amélioration a eu lieu sur l'autonomie des batteries qui permettra d'utiliser qu'une seule monoplace au lieu de 2 auparavant pour boucler entièrement le circuit. Les performances sont en hausse aussi car la puissance en course était de 200kW qui passeront à 250kW (268 chevaux). L'aérodynamique aussi réhaussé.</p>
+				<p>Question vitesse, elle prend une grande montée en passant d'une accélération de 0 à 100 <abbr title="kilomètres par heure">km/h</abbr> de 3 secondes à 2,8 secondes. La vitesse de pointe augmente très fortement d'un passage de 225 <abbr title="kilomètres par heure">km/h</abbr> à 280 <abbr title="kilomètres par heure">km/h</abbr> désormais. Elle est quand même loin du record de la Formule 1 pouvant atteindre 378 <abbr title="kilomètres par heure">km/h</abbr>... Cependant, elle pourrait peut être aller jusqu'à 300 <abbr title="kilomètres par heure">km/h</abbr> sur certaines lignes droites.</p>
+				<p>Néanmoins, le prix grimpent aussi pour une monoplace. D'un petit 480 000 euros, on arrive à 817 300 euros. Mais, cette monoplace permet de faire une course entière alors qu'avant, il en fallait deux. Il y a une économie de 150 000 euros environ.</p>
+				<div class="center-iframe">
+					<iframe src="https://www.youtube-nocookie.com/embed/TypQX-Jx0hI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</section>
             <!-- Flèche pour remonter aux header (barre de navigation principalement) -->
 			<a href="#top" class="scrollUp">
 				<img src="../images/arrow_top.png" alt="Flèche pour remonter en haut" title="Cliquer pour remonter"/>
 			</a>
-		</article>
+		</div>
 	</main>
 	<footer>
-		<section>
-			<h2>Copyright &copy;</h2>
-			<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
-			<article>
-				<ul class="sources">
-					<li>
-						<h3>Sources documentaires :</h3>
-						<ul>
-							<li>Eurosport</li>
-							<li>Futura-Sciences</li>
-							<li>Auto-Moto</li>
-							<li>Ouest-France</li>
-							<li>AutoNews</li>
-							<li>FIA Formule E</li>
-							<li>FIA</li>
-							<li>Mediasportif</li>
-							<li>Wikiwand (wikipédia)</li>
-						</ul>
-					</li>
-					<li>
-						<h3>Images :</h3>
-						<ul>
-							<li>Créé par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
-							<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
-							<li>Logo de Formule E : <a href="http://www.fiaformulae.com/fr">FIA Formule E</a></li>
-							<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3>Sources code :</h3>
-						<ul>
-							<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
-							<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>
-							<li>SVG de la flèche utilisée : <a href="https://fontawesome.com/icons/angle-down?style=solid">Font Awesome</a></li>
-							<li>La barre de navigation responsive : <a href="https://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">Medialoot</a></li>
-						</ul>
-					</li>
-				</ul>
-			</article>
-		</section>
+		<h2>Copyright &copy;</h2>
+		<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
+		<!-- Utilisation de l'élément div ayant la classe wrapper afin de diminuer la taille -->
+		<div class="wrapper">
+			<ul class="sources">
+				<li>
+					<h3>Sources documentaires :</h3>
+					<ul>
+						<li>Eurosport</li>
+						<li>Futura-Sciences</li>
+						<li>Auto-Moto</li>
+						<li>Ouest-France</li>
+						<li>AutoNews</li>
+						<li>FIA Formule E</li>
+						<li>FIA</li>
+						<li>Mediasportif</li>
+						<li>Automobile propre</li>
+						<li>Wikiwand (wikipédia)</li>
+						<li>Mennen</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Images :</h3>
+					<ul>
+						<li>Logos onglets et accueil créés par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
+						<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
+						<li>Logo de Formule E : <a href="http://www.fiaformulae.com/fr">FIA Formule E</a></li>
+						<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
+						<li>Image d'arrière plan de la page Histoire : <a href="http://www.fiaformulae.com/fr/championship/teams-and-drivers/">FIA Formule E</a></li>
+						<li>Image du halo de sécurité : <a href="https://rmcsport.bfmtv.com/f1/le-halo-pour-toutes-les-f1-des-2018-1220191.html">RMC Sport</a></li>
+						<li>Images des champions : <a href="https://www.wikiwand.com/fr/Jean-%C3%89ric_Vergne">Jean-Éric Vergne</a> (Wikiwand)</li>
+						<li>Image d'arrière plan de la page Records : <a href="https://www.carscoops.com/2017/11/ds-virgin-racing-gears-up-for-season-4/">Carscoops</a></li>
+						<li>Image d'arrière plan de la page Compétitions : <a href="https://franceracing.fr/formule-e/e-prix-de-punta-del-este-presentation-et-horaires/">FranceRacing</a></li>
+						<li>Logo du championnat de FE : <a href="http://www.autonewsinfo.com/2014/01/08/la-formule-e-annonce-la-naissance-dun-club-des-pilotes-dessais-112952.html">AutoNews</a></li>
+						<li>Safety-car : <a href="http://www.avem.fr/actualite-la-bmw-i8-sera-la-safety-car-officielle-de-la-formule-e-5251.html">AVEM</a></li>
+						<li>Image d'arrière plan de la page Fiche technique : <a href="https://mag.starterre.fr/sport-auto/ds-course-vers-futur.html">StarterreMag</a></li>
+						<li>Image du volant : <a href="http://www.economienouvelle.fr/championnat-formule-1-electrique-pour-donner-des-ailes-technologie/formule-e-volant/">Economie Nouvelle</a></li>
+						<li>Image du châssis : <a href="https://www.lepoint.fr/automobile/sports-et-reves/eprix-de-paris-la-formule-e-comment-ca-marche-21-04-2016-2033793_658.php">Le Point</a></li>
+						<li>Image de la mnoplace DS : <a href="https://f1only.fr/ds-techeetah-devoile-sa-monoplace-pour-la-saison-5/">F1ONLY.fr</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3>Sources code :</h3>
+					<ul>
+						<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
+						<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>
+						<li>SVG de la flèche utilisée : <a href="https://fontawesome.com/icons/angle-down?style=solid">Font Awesome</a></li>
+						<li>La barre de navigation responsive : <a href="https://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">Medialoot</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</footer>
 </body>
 </html>

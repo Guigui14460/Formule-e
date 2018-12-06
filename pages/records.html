@@ -7,102 +7,144 @@
 	<meta name="author" content="21804030" />
 	<title>Records de la Formule E</title>
 	<link rel="icon" href="../images/favicon.ico">
-    <!-- 2 liens CSS pour le site quand il est affiché à l'écran -->
-	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="../styles/records.css" media="screen">
-    <!-- 1 lien CSS pour le site lors de l'aperçu avant impression -->
-	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print">
+    <!-- 1 liens CSS pour le site quand il est affiché à l'écran -->
+	<link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen"> <!-- Feuille commune à toutes les pages -->
+	<!-- Feuille de cette page inexistante (l'unique ligne de CSS dans l'attribut style de l'élément HTML header) -->
+	<!-- 1 lien CSS pour le site lors de l'aperçu avant impression -->
+	<link rel="stylesheet" type="text/css" href="../styles/print.css" media="print"> <!-- Feuille commune à toutes les pages -->
 </head>
 <body>
-		<header id="top">
-			<nav>
-				<a href="../index.html" class="logo">
-					<img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil">
-				</a>
-				<!-- Bouton qui va faire apparaître/disparaître le menu lors d'un rétrécissement de la taille du navigateur -->
-				<label for="show-menu" class="show-menu">
-					<!-- Balise SVG pour permettre l'affichage de l'image (format : .svg) -->
-					<svg>
-						<image xlink:href="../images/bars-solid.svg" x="0" y="0" width="40px" height="40px" />
-					</svg>
-				</label>
-				<input type="checkbox" id="show-menu" role="button">
-				<ul id="menu">
-					<li><a href="../index.html">Accueil</a></li>
-					<li><a href="histoire.html">Histoire</a></li>
-					<li class="active"><a href="records.html">Records</a></li>
-					<li><a href="competition.html">Compétitions</a></li>
-					<li><a href="fiche_technique.html">Fiche technique</a></li>
-				</ul>
-			</nav>
-			<!-- Création d'une flèche descendante animée -->
-			<a href="#content" class="circle">
-				<svg>
-					<image xlink:href="../images/angle-down-solid.svg" x="0" y="0" width="55px" height="55px" />
-				</svg>
+	<header id="top" style="background-image: url(../styles/images/d87bdbf2-ds-virgin-03-formula-e-25.jpg);">
+		<nav>
+			<a href="../index.html" class="logo">
+				<img src="../images/logo_navbar.png" alt="Logo" title="Retour à l'accueil">
 			</a>
-		</header>
+			<!-- Bouton qui va faire apparaître/disparaître le menu lors d'un rétrécissement de la taille du navigateur -->
+			<label for="show-menu" class="show-menu">
+				<!-- Balise SVG pour permettre l'affichage de l'image (format : .svg) -->
+				<svg>
+					<image xlink:href="../images/bars-solid.svg" x="0" y="0" width="40px" height="40px" />
+				</svg>
+			</label>
+			<input type="checkbox" id="show-menu" role="button">
+			<ul id="menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="histoire.html">Histoire</a></li>
+				<li class="active"><a href="records.html">Records</a></li>
+				<li><a href="competition.html">Compétitions</a></li>
+				<li><a href="fiche_technique.html">Fiche technique</a></li>
+			</ul>
+		</nav>
+		<!-- Création d'une flèche descendante animée -->
+		<a href="#content" class="circle">
+			<svg>
+				<image xlink:href="../images/angle-down-solid.svg" x="0" y="0" width="55px" height="55px" />
+			</svg>
+		</a>
+	</header>
 	<main id="content">
 		<!-- Menu secondaire interne à la page -->
 		<aside>
 			<ul>
-				<li><a href="#def">Qu'est-ce qu'une Formule E ?</a></li>
-				<li><a href="#ecurie">Les écuries en FE</a></li>
-				<li class="sub-section"><a href="#feVSf1">Comparaison des écuries FE et F1</a></li>
+				<li><a href="#vehicules">Voitures</a></li>
+				<li><a href="#circuits">Circuits</a></li>
+				<li><a href="#pilotes">Pilotes</a></li>
 			</ul>
 		</aside>
-		<article>
+		<!-- Utilisation de l'élément div ayant la classe wrapper afin de diminuer la taille -->
+		<div class="wrapper">
 			<h1>Records</h1>
-			<section>
-				<h2>Vitesse</h2>
+			<section id="vehicules">
+				<h2>Véhicules</h2>
+				<ul>
+					<li>Puissance de 250 kW (340 chevaux impériaux)</li>
+					<li>Vitesse maximale de 300 km/h en ligne droite</li>
+					<li>50 kilomètres d'autonomie</li>
+					<li>Aucune émission de CO<sub>2</sub>.</li>
+				</ul>
+			</section>
+			<section id="circuits">
+				<h2>Circuits</h2>
+				<ul>
+					<li>Le plus long est celui d'Olympic Green situé à Pékin d'une longueur de 3,453km</li>
+					<li>Distance la plus grande : 106.965 km (Berlin-Tempelhof situé à Berlin)</li>
+				</ul>
+				<div class="center-iframe">
+					<p>Voici le circuit de Paris en 3 dimensions :</p>
+					<iframe src="https://www.youtube-nocookie.com/embed/ssAMnuUMjD8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</section>
+			<section id="pilotes">
+				<h2>Pilotes</h2>
+				<ul>
+					<li>Le plus jeune pilote a avoir commencé un E-Prix est Matthew Brabham (20 ans et 270 jours)</li>
+					<li>Celui a avoir gagné le plus de courses est Sébastien Buemi (Suisse), le 2<sup>ème</sup> champion du monde (12 victoires sur 43 courses)</li>
+					<li>Le suisse a aussi le taux de victoire en 1 saison le plus élevé : 50% de victoire (6 sur 12 courses)</li>
+					<li>Il est aussi le pilote a avoir gagné le plus de courses consécutivement (Hong Kong, Marrakesh, Buenos Aires)</li>
+					<li>Le pilote a avoir le plus de podium sans être premier est Nick Heidfeld (8 podiums)</li>
+					<li>Lucas di Grassi (Brésil), le 3<sup>ème</sup> champion du monde, a, quant à lui, le plus de points dans toute sa carrière en FE réunis (611 points)</li>
+					<li>Les pilotes brésilien et suisse ont tous les deux, le nombre le plus élevé de <a href="competition.html#puissance">FANBOOST</a> accrodé (26 au total)</li>
+				</ul>
 			</section>
             <!-- Flèche pour remonter aux header (barre de navigation principalement) -->
 			<a href="#top" class="scrollUp">
 				<img src="../images/arrow_top.png" alt="Flèche pour remonter en haut" title="Cliquer pour remonter"/>
 			</a>
-		</article>
+		</div>
 	</main>
 	<footer>
-		<section>
-			<h2>Copyright &copy;</h2>
-			<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
-			<article>
-				<ul class="sources">
-					<li>
-						<h3>Sources documentaires :</h3>
-						<ul>
-							<li>Eurosport</li>
-							<li>Futura-Sciences</li>
-							<li>Auto-Moto</li>
-							<li>Ouest-France</li>
-							<li>AutoNews</li>
-							<li>FIA Formule E</li>
-							<li>FIA</li>
-							<li>Mediasportif</li>
-							<li>Wikiwand (wikipédia)</li>
-						</ul>
-					</li>
-					<li>
-						<h3>Images :</h3>
-						<ul>
-							<li>Créé par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
-							<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
-							<li>Logo de Formule E : <a href="http://www.fiaformulae.com/fr">FIA Formule E</a></li>
-							<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3>Sources code :</h3>
-						<ul>
-							<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
-							<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>
-							<li>SVG de la flèche utilisée : <a href="https://fontawesome.com/icons/angle-down?style=solid">Font Awesome</a></li>
-							<li>La barre de navigation responsive : <a href="https://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">Medialoot</a></li>
-						</ul>
-					</li>
-				</ul>
-			</article>
-		</section>
+		<h2>Copyright &copy;</h2>
+		<p>Ce site a été réalisé par LETELLIER Guillaume de numéro étudiant 21804030 du groupe 1A de la Licence Info de Caen</p>
+		<!-- Utilisation de l'élément div ayant la classe wrapper afin de diminuer la taille -->
+		<div class="wrapper">
+			<ul class="sources">
+				<li>
+					<h3>Sources documentaires :</h3>
+					<ul>
+						<li>Eurosport</li>
+						<li>Futura-Sciences</li>
+						<li>Auto-Moto</li>
+						<li>Ouest-France</li>
+						<li>AutoNews</li>
+						<li>FIA Formule E</li>
+						<li>FIA</li>
+						<li>Mediasportif</li>
+						<li>Automobile propre</li>
+						<li>Wikiwand (wikipédia)</li>
+						<li>Mennen</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Images :</h3>
+					<ul>
+						<li>Logos onglets et accueil créés par LETELLIER Guillaume avec l'outil en ligne <a href="https://fr.freelogodesign.org/">Free Logo Design</a></li>
+						<li>Image d'arrière plan de la page d'accueil : <a href="https://fr.motorsport.com/">Motorsport</a></li>
+						<li>Logo de Formule E : <a href="http://www.fiaformulae.com/fr">FIA Formule E</a></li>
+						<li>Logo de la FIA : <a href="https://www.caradisiac.com/au-mondial-de-paris-la-fia-fait-la-promotion-de-l-ecoconduite-171736.htm">Caradisiac.com</a></li>
+						<li>Image d'arrière plan de la page Histoire : <a href="http://www.fiaformulae.com/fr/championship/teams-and-drivers/">FIA Formule E</a></li>
+						<li>Image du halo de sécurité : <a href="https://rmcsport.bfmtv.com/f1/le-halo-pour-toutes-les-f1-des-2018-1220191.html">RMC Sport</a></li>
+						<li>Images des champions : <a href="https://www.wikiwand.com/fr/Jean-%C3%89ric_Vergne">Jean-Éric Vergne</a> (Wikiwand)</li>
+						<li>Image d'arrière plan de la page Records : <a href="https://www.carscoops.com/2017/11/ds-virgin-racing-gears-up-for-season-4/">Carscoops</a></li>
+						<li>Image d'arrière plan de la page Compétitions : <a href="https://franceracing.fr/formule-e/e-prix-de-punta-del-este-presentation-et-horaires/">FranceRacing</a></li>
+						<li>Logo du championnat de FE : <a href="http://www.autonewsinfo.com/2014/01/08/la-formule-e-annonce-la-naissance-dun-club-des-pilotes-dessais-112952.html">AutoNews</a></li>
+						<li>Safety-car : <a href="http://www.avem.fr/actualite-la-bmw-i8-sera-la-safety-car-officielle-de-la-formule-e-5251.html">AVEM</a></li>
+						<li>Image d'arrière plan de la page Fiche technique : <a href="https://mag.starterre.fr/sport-auto/ds-course-vers-futur.html">StarterreMag</a></li>
+						<li>Image du volant : <a href="http://www.economienouvelle.fr/championnat-formule-1-electrique-pour-donner-des-ailes-technologie/formule-e-volant/">Economie Nouvelle</a></li>
+						<li>Image du châssis : <a href="https://www.lepoint.fr/automobile/sports-et-reves/eprix-de-paris-la-formule-e-comment-ca-marche-21-04-2016-2033793_658.php">Le Point</a></li>
+						<li>Image de la mnoplace DS : <a href="https://f1only.fr/ds-techeetah-devoile-sa-monoplace-pour-la-saison-5/">F1ONLY.fr</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3>Sources code :</h3>
+					<ul>
+						<li>Flèche pour remonter : <a href="https://www.linuxtricks.fr/wiki/creer-un-bouton-vers-le-haut-sur-son-site">Linuxtricks</a></li>
+						<li>Animation de la flèche descendante : <a href="https://www.youtube.com/watch?v=M0saqV6b1dQ&list=PL5e68lK9hEzeFb_I2D25b8Gf83vgo2yow">Youtube</a></li>
+						<li>SVG de la flèche utilisée : <a href="https://fontawesome.com/icons/angle-down?style=solid">Font Awesome</a></li>
+						<li>La barre de navigation responsive : <a href="https://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/">Medialoot</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</footer>
 </body>
 </html>

@@ -1,18 +1,25 @@
+/*Organisation du fichier CSS :
+	- corps du site (ligne 7)
+		+ header (ligne 8)
+		+ main (ligne 13)
+*/
+
+/* CORPS DU SITE */
+/* HEADER */
+header {
+	background-image: url(images/punta_del_este_1010x365px.jpg);
+}
+
+/* MAIN */
+#ecurie h3 {
+	text-align: center;
+}
+
 /* Création d'une grille pour un meilleur placement de la liste */
 #feVSf1 {
 	display: grid;
-	grid-template-columns: 3fr 2fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 15px;
-}
-#feVSf1, #feVSf1 ol,
-#feVSf1 li {
-	text-align: start;
-}
-#feVSf1, #feVSf1 li {
-	margin: 0;
-	padding: 0;
-}
-#feVSf1 {
 	list-style-type: none;
 }
 

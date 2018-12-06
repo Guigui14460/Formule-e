@@ -1,0 +1,28 @@
+/*Organisation du fichier CSS :
+	- corps du site (ligne 9)
+		+ header (ligne 10)
+	- mise en place du responsive (@media) (ligne 16)
+		+ tailles maximales
+			* 890px (ligne 17)
+*/
+
+/* CORPS DU SITE */
+/* HEADER */
+header {
+    background-image: url(images/batteries-Formule-E-DS-Virgin.jpg);
+}
+
+
+/* MISE EN PLACE POUR LE RESPONSIVE */
+@media (min-width: 890px){
+    nav li a {
+        color: rgb(224, 117, 17);
+        transition: 0.4s ease-in-out;
+    }
+
+    .active a,
+    nav ul li:hover a,
+    nav ul li:active a {
+        color: #fff;
+    }
+}

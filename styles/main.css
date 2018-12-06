@@ -1,20 +1,23 @@
 ﻿/*Organisation du fichier CSS :
 	- définition des polices, remise à zéros de valeurs (ligne 20)
 	- corps du site (ligne 38)
-		+ header (ligne 67)
-			* barre de navigation principale (ligne 76)
-			* flèche descendante animée (ligne 145)
-		+ main (ligne 191)
-			* menu secondaire, menu page (ligne 198)
-			* conteneur (ligne 246)
-			* contenu vidéo YouTube : mise en place de son adaptivité face aux tailles de navigateur (ligne 296)
-			* flèche pour remonter au header (ligne 311)
-		+ footer (ligne 325)
-			* disposition des sources (ligne 347)
-	- mise en place du responsive (@media) (ligne 364)
-		+ 890px (ligne 365)
-		+ 700px (ligne 414)
-		+ 435px (ligne 454)
+		+ header (ligne 62)
+			* barre de navigation principale (ligne 72)
+			* flèche descendante animée (ligne 137)
+		+ main (ligne 184)
+			* menu secondaire, menu page (ligne 191)
+			* conteneur (ligne 221)
+			* contenu vidéo YouTube : mise en place de son adaptivité face aux tailles de navigateur (ligne 302)
+			* flèche pour remonter au header (ligne 317)
+		+ footer (ligne 331)
+			* disposition des sources (ligne 353)
+	- mise en place du responsive (@media) (ligne 372)
+		+ tailles minimales
+			* 2000px (ligne 373)
+		+ tailles maximales
+			* 890px (ligne 382)
+			* 700px (ligne 433)
+			* 435px (ligne 466)
 */
 
 /*POLICES*/
@@ -37,6 +40,7 @@
 
 /*CORPS DU SITE*/
 body {
+	font-size: 16px;
 	margin: 0;
     padding: 0;
 	color: #212529;
@@ -45,18 +49,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, nav ul li,
-main a:hover,
-main a:active,
-footer a:hover,
-footer a:active,
-main p:first-letter {
-	font-weight: bold;
-}
 /* On met en lettre capitale */
 h1, nav ul li {
+	font-weight: bold;
 	text-transform: uppercase;
 }
+
 /* Changement de curseur */
 a:hover,
 a:active,
@@ -67,10 +65,11 @@ svg {
 /*HEADER*/
 header {
 	height: 100vh; /* Prend toute la hauteur de la fenêtre */
-	background-image: url(../images/formule_e_motorsport.jpg);
+	background-image: url(images/formule_e_motorsport.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover; /* Couvre tout la header */
+	z-index: 99;
 }
 
 /* BARRE DE NAVIGATION PRINCIPALE */
@@ -103,19 +102,15 @@ nav ul li:active {
 	background-color: rgba(0, 153, 153, .5);
 	border-radius: 8px;
 }
-nav ul li a {
-	text-decoration: none;
-    color: #000;
-    margin-right: 0;
-	padding: 10px;
-}
 nav li a {
     display: block; /* Permet de prendre tout l'espace inutile du li pour pouvoir faire de plus gros lien cliquable */
     height: 65px;
     text-align: center;
-    line-height: 65px;
+	line-height: 65px;
+	text-decoration: none;
     color: #000;
-    text-decoration: none;
+    margin-right: 0;
+	padding: 10px;
 }
 /* "Menu déroulant" pour afficher le menu principal */
 .show-menu {
@@ -188,17 +183,18 @@ input[type=checkbox]:checked ~ #menu {
 	}
 }
 
+
 /*MAIN*/
 main {
 	display: grid; /* On affiche une grille */
-	grid-template-columns: 200px 1fr; /* 200px = élément aside, 1fr = reste de la page pour élément article */
+	grid-template-columns: 200px 1fr; /* 200px = élément aside, 1fr = reste de la page pour élément de classe wrapper */
 	background-color: #eee;
 }
 
 /* MENU SECONDAIRE, MENU POUR PAGE */
 aside {
 	width: 90%;
-	margin: 10px;
+	margin: 100px 10px 10px 10px;
 }
 aside ul {
 	margin: 0;
@@ -219,8 +215,19 @@ aside ul .sub-section {
 	border-left: 2px solid #ffd11a;
 }
 aside ul li a {
+	display: block;
+	text-align: left;
 	text-decoration: none;
 	color: #eee;
+}
+
+/* CRÉATION D'UN CONTENEUR POUR LE CONTENU DE LA PAGE */
+/* On réduit la largeur de 10% et on le centre */
+.wrapper {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px 30px;
 }
 
 /* On change la police de tous les éléments h1 et h2 */
@@ -229,12 +236,15 @@ h1, h2 {
 }
 h1 {
 	text-shadow: 1px 1px #1d1616;
-	font-size: 300%;
+	font-size: 3em;
 	margin: 10px 0 10px 0;
 	text-align: center;
 }
 h2 {
-	margin-left: 20px;
+	margin: 10px 0 3px 20px;
+}
+h3 {
+	margin: 6px 0 2px 30px;
 }
 
 p {
@@ -243,29 +253,26 @@ p {
 /* Décalage de la première lettre de chaque paragraphe situé dans l'élément main (faire un alinéa et une petite lettrine) */
 main p:first-letter {
 	padding-left: 45px;
-	font-size: 120%;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
-/* CRÉATION D'UN CONTENEUR POUR LE CONTENU DE LA PAGE */
-/* On réduit la largeur de 10% et on le centre */
-article {
-	width: 90%; 
-	margin-right: auto;
-	margin-left: auto;
-	padding: 20px 30px 20px 30px;
+main a:hover, main a:active,
+footer a:hover, footer a:active {
+	font-weight: bold;
 }
-article a, article a:visited,
-footer a, footer a:visited {
+main .wrapper a, main .wrapper a:visited,
+footer .wrapper a, footer .wrapper a:visited {
 	text-decoration: none;
 	color: #0099cc;
 	transition: 0.3s ease; /* Effet de transition au survol des liens */
 }
-article a:hover {
+main .wrapper a:hover {
 	color: #000066;
 }
 
 /* On définit des marges plus appropriées au contenu de la page (car réinitialisé au début) */
-main ul {
+main ul, main ol {
     margin-left: 12px;
 }
 main li {
@@ -273,23 +280,25 @@ main li {
 	padding: 0 0 0 10px;
 }
 
-/* On place les éléments figure à droite avec une taille de 250 pixels entouré par le texte */
-figure {
-    width: 250px;
+/* On place les éléments figure ayant comme classe main_image à droite avec une taille de 250 pixels entouré par le texte */
+figure.main_image {
+    width: 15.625em;
 	height: auto; /* Prendra la taille de l'image pour ne pas la découper ou laisser des marges internes */
 	float: right;
+	clear: both;
 	margin: 0 0 0 20px;
 	box-sizing: content-box;
+	text-align: center;
 }
 /* On recentre l'image dans la figure et elle prend toute la place disponible en fonction de sa taille */
-figure img {
+figure.main_image img {
     width: 100%;
     height: auto;
 	display: block;
 }
-figcaption {
+figure.main_image figcaption {
     font-style: italic;
-    font-size: 70%;
+    font-size: 0.7em;
     padding: 3px 0 0 0;
 }
 
@@ -300,7 +309,7 @@ figcaption {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	margin: 0 auto 25px auto;
+	margin: 10px auto 10px auto;
 }
 /* Définition de la taille de la vidéo */
 iframe {
@@ -324,12 +333,12 @@ iframe {
 
 /*FOOTER*/
 footer {
-	font-size: 85%; /* Réduction de la taille de toutes les polices contenues dans l'élément footer */
+	font-size: 0.85em; /* Réduction de la taille de toutes les polices contenues dans l'élément footer */
 	padding: 10px;
 	background-color: #25282d;
 	color: #eee;
 }
-footer article a:hover {
+footer .wrapper a:hover {
 	color: #39598e; /* Couleur différente au survol par rapport aux éléments a contenues dans le main */
 }
 footer ul {
@@ -347,7 +356,7 @@ footer p {
 /* DISPOSITION DES SOURCES */
 .sources {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr; /* 1er : Sources documentaires, 2ème : Images, 3ème : Sources code (techniques) */
+	grid-template-columns: 1fr 2fr 1fr; /* 1er : Sources documentaires, 2ème : Images, 3ème : Sources code (techniques) */
 	grid-gap: 20px;
 	color: rgb(156, 143, 143);
 }
@@ -362,10 +371,24 @@ footer p {
 
 
 /* MISE EN PLACE POUR LE RESPONSIVE */
+@media (min-width: 2000px){
+	body {
+		font-size: 35px;
+	}
+	main {
+		grid-template-columns: 500px 1fr;
+	}
+}
+
 @media (max-width : 890px){
-    .logo {
+	.logo {
         background-color: #3dd;
-    }
+	}
+	nav img {
+		margin: 10px 0;
+		height: 55px;
+		width: auto;
+	}
     nav ul {
         position: relative;
         display: none; /* Désaffichage du menu (remplacer pour le système de checkbox et menu déroulant (ligne 120)) */
@@ -375,7 +398,7 @@ footer p {
     nav li {
         margin-bottom: 1px;
     }
-    nav ul li, a {
+    nav ul li, nav a {
         width: 100%;
 		text-align: center;
     }
@@ -383,21 +406,10 @@ footer p {
         height: 50px;
         line-height: 50px;
     }
-    .show-menu {
-        display: block; /* Affichage du bouton pour dérouler le menu */
-	}
-	.scrollUp {
-		display: none; /* Désaffichage de la flèche de remontée */
-	}
-
-	nav img {
-		margin: 10px 0 10px 0;
-		height: 55px;
-		width: auto;
-	}
-
+	
 	/* Redimentionnage du bouton et de l'image */
 	.show-menu {
+		display: block; /* Affichage du bouton pour dérouler le menu */
 		height: 60px;
 		line-height: 60px;
 	}
@@ -407,20 +419,19 @@ footer p {
 		margin: 8px 8px 8px 0;
 		padding: 0;
 	}
-}
 
-
-
-@media (max-width: 700px){
-    main {
+	main {
 		display: initial; /* Suppression des grilles */
 	}
 	aside {
-		margin-top: 30px;
-		width: 90%; /* Prend 90% de la largeur de son bloc */
-		margin-left: auto;
-		margin-right: auto;
+		display: none;
     }
+	.scrollUp {
+		display: none; /* Désaffichage de la flèche de remontée */
+	}
+}
+
+@media (max-width: 700px){
 	header {
         height: 50vh; /* Le header prend 50% de la hauteur du navigateur */
         background-position-y: 0px; /* Positionnage à 0 en hauteur pour l'image d'arrière-plan */
@@ -428,32 +439,34 @@ footer p {
 	.circle, .circle svg {
 		display: none; /* Désaffichage de la flèche de descente animée */
 	}
-	.sources ul li {
-		text-indent:5px; 
-	}
-    .sources {
-        display: initial; /* Suppression des grilles pour les sources */
+
+	.wrapper {
+        padding: 20px 0;
     }
     h2 {
         text-align: center;
-    }
+	}
     main p:first-letter {
         padding-left: 20px;
     }
-    article {
-        padding: 20px 0 20px 0;
-    }
+    
     footer p {
-        margin: 0 0 0 0;
+        margin: 0;
 	}
-	footer h3 {
+	.sources {
+        display: initial; /* Suppression des grilles pour les sources */
+    }
+	.sources h3 {
 		margin: 15px 0 0 0;
+	}
+	.sources ul li {
+		text-indent:5px; 
 	}
 }
 
 @media (max-width: 435px){
 	/* L'élément figure prend désormais toute la taille du bloc dans lequel il se trouve */
-    main figure {
+    figure.main_image {
         margin: 0;
         float: none;
         width: 100%;
