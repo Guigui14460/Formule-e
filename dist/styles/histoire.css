@@ -1,0 +1,103 @@
+/*Organisation du fichier CSS :
+	- définition des polices, remise à zéros de valeurs (ligne 16)
+	- corps du site (ligne 22)
+		+ header (ligne 23)
+		+ main (ligne 28)
+			* galerie des champions (ligne 29)
+	- mise en place du responsive (@media) (ligne 68)
+		+ tailles minimales
+            * 2000px (ligne 69)
+            * 1300px (ligne 76)
+		+ tailles maximales
+			* 890px (ligne 83)
+			* 700px (ligne 94)
+*/
+
+/* POLICES */
+@font-face {
+	font-family: Roboto;
+	src: url(polices/Roboto-Regular.ttf);
+}
+
+/* CORPS DU SITE */
+/* HEADER */
+header {
+    background-image: url(images/teams-and-drivers.jpg);
+}
+
+/* MAIN */
+/* GALERIE DES CHAMPIONS */
+#champions_gallery {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: auto;
+}
+
+#champions_gallery h2 {
+    grid-column: 2 span;
+    margin-bottom: 10px;
+}
+
+#champions_gallery figure {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#champions_gallery figure img {
+    height: 300px;
+    width: auto;
+    opacity: 0.6;
+    transition: transform .5s ease-out,
+                opacity 0.5s 0.5s linear;
+}
+
+#champions_gallery figure:hover img {
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+#champions_gallery figure figcaption {
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* MISE EN PLACE POUR LE RESPONSIVE */
+@media (min-width: 2000px){
+    #champions_gallery figure img {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+@media (min-width: 1300px){
+    #champions_gallery figure img {
+        height: 450px;
+        width: auto;
+    }
+}
+
+@media (max-width: 890px){
+    #champions_gallery figure img {
+        opacity: 1;
+        transition: initial;
+    }
+    
+    #champions_gallery figure:hover img {
+        transform: initial;
+    }
+}
+
+@media (max-width: 700px){
+	#champions_gallery {
+        display: initial;
+    }
+
+    #champions_gallery figure img {
+        width: 100%;
+        height: auto;
+    }
+}
