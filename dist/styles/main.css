@@ -201,18 +201,18 @@ aside ul {
 	padding: 0;
 	padding: 3px;
 	list-style-type: none;
-	background-color: #24ad46;
+	background-color: #48e66f;
 }
 aside ul li {
-	background-color: #006600;
+	background-color: #08b908;
 	padding: 5px;
 	margin: 7px;
-	border-left: 2px solid #ff6600;
+	border-left: 3px solid #ff6600;
 }
 /* On met une marges à gauche pour les éléments li de class sub-section pour qu'ils soient affiché comme une sous-partie */
 aside ul .sub-section {
 	margin-left: 20px;
-	border-left: 2px solid #ffd11a;
+	border-left: 3px solid #ffd11a;
 }
 aside ul li a {
 	display: block;
