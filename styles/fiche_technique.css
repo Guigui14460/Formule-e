@@ -9,15 +9,14 @@
 /* CORPS DU SITE */
 /* HEADER */
 header {
-    background-image: url(images/batteries-Formule-E-DS-Virgin.jpg);
+    background-image: url(images/batteries-Formule-E-DS-Virgin.jpg); /* Nouvelle image d'arrière-plan */
 }
 
 
 /* MISE EN PLACE POUR LE RESPONSIVE */
 @media (min-width: 890px){
     nav li a {
-        color: rgb(224, 117, 17);
-        transition: 0.4s ease-in-out;
+        color: rgb(224, 117, 17); /* Changement de couleur du texte de la barre de navigation */
     }
 
     .active a,
