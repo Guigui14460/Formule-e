@@ -1,6 +1,6 @@
 # Formule-E
 
-Projet universitaire réalisé en première année à l'Université de Caen Normandie.
+Projet universitaire réalisé en L1 Informatique à l'Université de Caen Normandie.
 
 ![](logo-UNICAEN.jpg)
 
